@@ -89,12 +89,14 @@
         </div>
     </div>
 
-    <script>
+<script>
         const modal = document.getElementById('videoModal');
         const openBtn = document.getElementById('openVideo');
         const closeBtn = document.getElementById('closeVideo');
         const iframe = document.getElementById('youtubeIframe');
-        const videoUrl = "https://www.youtube.com/embed/H8A-fnpTgmU?autoplay=1"; // 팝업 열릴 때 자동재생
+        
+        // 팝업이 열릴 때 자동 재생(&autoplay=1)과 브라우저 차단을 막기 위한 음소거(&mute=1) 적용
+        const videoUrl = "https://www.youtube.com/embed/H8A-fnpTgmU?autoplay=1&mute=1";
 
         // 이미지 클릭 시 팝업 열기
         openBtn.addEventListener('click', function(e) {
